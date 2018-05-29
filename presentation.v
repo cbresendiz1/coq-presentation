@@ -126,4 +126,3 @@ Example test_andb34 : (andb3 true true false) = false.
 Proof.
   reflexivity.
 Qed.
-

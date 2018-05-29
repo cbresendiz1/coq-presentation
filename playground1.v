@@ -171,3 +171,9 @@ Proof.
   reflexivity.
   reflexivity.
 Qed.
+
+Inductive even : nat -> Prop :=
+| zero_is_even : even 0
+| S_of_odd_is_even : (forall n : nat, odd n -> even (S n))
+with odd : nat -> Prop :=
+| S_of_even_is_odd : (forall n : nat, even n -> odd (S n)).
